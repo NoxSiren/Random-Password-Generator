@@ -30,6 +30,28 @@ function passwordGen() {
     alert("The value is invalid. Please try again."); return passwordGen();
   }
 
+// Confirm passwordpool characters
+var wantLower = confirm("Click OK to include lowercase letters.");
+var wantUpper = confirm("Click OK to include uppercase letters.");
+var wantNumber = confirm("Click OK to include numbers.");
+var wantSpecial = confirm("Click OK to include special characters.");
+
+  // Conditions of user selections
+  if (wantUpper) {
+    passwordPool = passwordPool.concat(upperCase);
+  }
+
+  if (wantLower) {
+    passwordPool = passwordPool.concat(lowerCase);
+  }
+  if (wantNumber) {
+    passwordPool = passwordPool.concat(number);
+  }
+
+  if (wantSpecial) {
+    passwordPool = passwordPool.concat(specialChar);
+  }
+
 
 
 
